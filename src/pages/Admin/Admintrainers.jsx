@@ -195,7 +195,7 @@ const Admintrainers = () => {
                 {editTrainers && !image && (
                   <div className="current-image">
                     <img
-                      src={`http://localhost:5000/uploads/photos/${editTrainers.image}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${editTrainers.image}`}
                       alt="Current"
                     />
                     <small>Current image (upload new to replace)</small>
@@ -237,7 +237,7 @@ const Admintrainers = () => {
                 >
                   <div className="card-image">
                     <img
-                      src={`http://localhost:5000/uploads/photos/${trainer.image}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${trainer.image}`}
                       alt={trainer.name}
                     />
                   </div>

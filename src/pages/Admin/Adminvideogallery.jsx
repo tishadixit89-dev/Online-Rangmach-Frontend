@@ -168,7 +168,7 @@ const Adminvideogallery = () => {
                   <div className="current-video">
                     <video controls>
                       <source
-                        src={`http://localhost:5000/uploads/videos/${editItem.video}`}
+                        src={`https://online-rangmach-backend-own6.vercel.app/uploads/videos/${editItem.video}`}
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -213,7 +213,7 @@ const Adminvideogallery = () => {
                   <div className="card-video">
                     <video controls>
                       <source
-                        src={`http://localhost:5000/uploads/videos/${item.video}`}
+                        src={`https://online-rangmach-backend-own6.vercel.app/uploads/videos/${item.video}`}
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.

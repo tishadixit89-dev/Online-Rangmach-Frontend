@@ -190,7 +190,7 @@ const Admincourses = () => {
                   {editCourse && !image && (
                     <div className="current-image">
                       <img
-                        src={`http://localhost:5000/uploads/photos/${editCourse.image}`}
+                        src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${editCourse.image}`}
                         alt="Current"
                       />
                       <small>Current image (upload new to replace)</small>
@@ -254,7 +254,7 @@ const Admincourses = () => {
                 >
                   <div className="card-image">
                     <img
-                      src={`http://localhost:5000/uploads/photos/${course.image}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${course.image}`}
                       alt={course.coursename}
                     />
                   </div>

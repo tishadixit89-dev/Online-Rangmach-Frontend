@@ -57,7 +57,7 @@ const TrainersPage = () => {
               >
                 <div className="card-avatar">
                   <img
-                    src={`http://localhost:5000/uploads/photos/${trainer.image}`}
+                    src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${trainer.image}`}
                     alt={trainer.name}
                   />
                 </div>

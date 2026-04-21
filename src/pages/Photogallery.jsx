@@ -48,7 +48,7 @@ const PhotogalleryPage = () => {
               >
                 <div className="gallery-media">
                   <img
-                    src={`http://localhost:5000/uploads/photos/${item.image}`}
+                    src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${item.image}`}
                     alt={item.title}
                     className="gallery-img"
                   />

@@ -58,7 +58,7 @@ const VideogalleryPage = () => {
                 <div className="video-wrapper">
                   <video controls className="video">
                     <source
-                      src={`http://localhost:5000/uploads/videos/${video.video}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/videos/${video.video}`}
                       type="video/mp4"
                     />
                   </video>

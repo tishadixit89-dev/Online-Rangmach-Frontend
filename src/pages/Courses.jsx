@@ -66,7 +66,7 @@ const Courses = () => {
                 >
                   <div className="course-media">
                     <img
-                      src={`http://localhost:5000/uploads/photos/${course.image}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${course.image}`}
                       alt={course.coursename}
                       className="course-img"
                     />

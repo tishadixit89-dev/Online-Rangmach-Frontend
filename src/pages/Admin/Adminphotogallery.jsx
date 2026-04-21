@@ -161,7 +161,7 @@ const Adminphotogallery = () => {
                 {editItem && !image && (
                   <div className="current-image">
                     <img
-                      src={`http://localhost:5000/uploads/photos/${editItem.image}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${editItem.image}`}
                       alt="Current"
                     />
                     <small>Current image (upload new to replace)</small>
@@ -203,7 +203,7 @@ const Adminphotogallery = () => {
                 >
                   <div className="card-image">
                     <img
-                      src={`http://localhost:5000/uploads/photos/${item.image}`}
+                      src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${item.image}`}
                       alt={item.title}
                     />
                   </div>
