@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../assets/css/PhotogalleryPage.css";
+import "../assets/css/PhotoGalleryPage.css";
 import { getPhotogallery } from "../services/photogalleryService";
 
 const PhotogalleryPage = () => {
@@ -48,7 +48,7 @@ const PhotogalleryPage = () => {
               >
                 <div className="gallery-media">
                   <img
-                    src={`https://online-rangmach-backend-own6.vercel.app/uploads/photos/${item.image}`}
+                    src={`http://localhost:5000/uploads/photos/${item.image}`}
                     alt={item.title}
                     className="gallery-img"
                   />
