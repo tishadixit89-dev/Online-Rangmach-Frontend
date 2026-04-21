@@ -1,0 +1,513 @@
+/* ================= ADMIN COURSES ================= */
+.admin-courses {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #040814 0%, #061124 100%);
+  color: #eef2ff;
+  padding: 20px;
+}
+
+/* HEADER */
+.courses-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: rgba(8, 16, 38, 0.95);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 209, 102, 0.16);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+.courses-header h1 {
+  font-size: 2.5rem;
+  color: #ffd166;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.courses-header p {
+  color: #a9b4d3;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* MAIN CONTENT */
+.courses-main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* MESSAGE TOAST */
+.message-toast {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  animation: slideDown 0.5s ease-out;
+}
+
+.message-toast.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.message-toast.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* FORM SECTION */
+.form-section {
+  margin-bottom: 60px;
+}
+
+.form-card {
+  background: rgba(10, 18, 42, 0.92);
+  border: 1px solid rgba(255, 209, 102, 0.16);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-header h2 {
+  color: #ffd166;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+.form-header p {
+  color: #a9b4d3;
+  margin: 0;
+}
+
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #ffd166;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(4, 8, 22, 0.95);
+  color: #eef2ff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(255, 209, 102, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.1);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.image-preview,
+.current-image {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.image-preview img,
+.current-image img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.current-image small {
+  display: block;
+  color: #a9b4d3;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.submit-btn,
+.cancel-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #ffd166, #f0b500);
+  color: #08101d;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 209, 102, 0.3);
+}
+
+.cancel-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.cancel-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-2px);
+}
+
+/* COURSES SECTION */
+.courses-section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  color: #ffd166;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: #a9b4d3;
+  margin: 0;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.course-card {
+  background: rgba(10, 18, 42, 0.92);
+  border: 1px solid rgba(255, 209, 102, 0.16);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 209, 102, 0.32);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.32);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.course-card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  color: #ffd166;
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+}
+
+.course-description {
+  color: #eef2ff;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.course-meta span {
+  color: #a9b4d3;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.card-actions .delete-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.card-actions .delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.card-actions .delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+/* EMPTY STATE */
+.no-courses {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-state {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.empty-state h3 {
+  color: #ffd166;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  color: #a9b4d3;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ANIMATIONS */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .admin-courses {
+    padding: 15px;
+  }
+
+  .courses-header {
+    padding: 30px 20px;
+  }
+
+  .courses-header h1 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+}
+  color: #09101b;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background: #ffda7a;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(255, 193, 7, 0.18);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+thead {
+  background: #0d315f;
+  color: #ffd166;
+}
+
+th,
+td {
+  padding: 18px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+table button {
+  background: #0d315f;
+  min-width: 88px;
+  padding: 10px 16px;
+  color: #ffd166;
+}
+
+table button:hover {
+  background: #0a2350;
+}
+
+table button + button {
+  margin-left: 10px;
+}
+
+footer {
+  background: transparent;
+  color: #94a3b8;
+  text-align: center;
+  padding: 22px 18px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 28px 18px;
+  }
+
+  .form-box {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  th,
+  td {
+    padding: 14px 12px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

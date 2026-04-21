@@ -1,0 +1,226 @@
+:root {
+  --bg: #040814;
+  --panel: rgba(8, 18, 42, 0.92);
+  --panel-soft: rgba(13, 24, 54, 0.82);
+  --text: #eef2ff;
+  --muted: #b8c1d3;
+  --accent: #ffd166;
+  --accent-dark: #f0b500;
+  --border: rgba(255, 209, 102, 0.16);
+}
+
+.courses-page {
+  min-height: 100%;
+  background: linear-gradient(180deg, #040814 0%, #060a1c 100%);
+  color: var(--text);
+}
+
+.courses-hero {
+  height: 320px;
+  display: grid;
+  place-items: center;
+  background: url("https://images.unsplash.com/photo-1503095396549-807759245b35")
+    center/cover no-repeat;
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.courses-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(255, 209, 102, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(3, 9, 31, 0.92), rgba(4, 8, 26, 0.92));
+}
+
+.hero-copy {
+  position: relative;
+  max-width: 860px;
+  text-align: center;
+  padding: 18px 24px;
+}
+
+.hero-copy span {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.6rem, 4vw, 3.4rem);
+  line-height: 1.03;
+  margin-bottom: 18px;
+}
+
+.hero-copy p {
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.courses-list {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.courses-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.85rem;
+}
+
+.courses-top h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0;
+}
+
+.section-copy {
+  max-width: 520px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.status-message {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 24px;
+  font-size: 1rem;
+}
+
+.status-message.error {
+  color: #ffad60;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 209, 102, 0.24);
+}
+
+.course-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.course-card:hover .course-img {
+  transform: scale(1.08);
+}
+
+.course-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.course-body h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.course-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.course-action {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #08101d;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.course-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(255, 209, 102, 0.18);
+}
+
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-hero {
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.2rem;
+  }
+
+  .courses-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}

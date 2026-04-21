@@ -1,0 +1,221 @@
+/* ================= ADMIN CONTACTS ================= */
+.admin-contacts {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #040814 0%, #061124 100%);
+  color: #eef2ff;
+  padding: 20px;
+}
+
+/* HEADER */
+.contacts-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: rgba(8, 16, 38, 0.95);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 209, 102, 0.16);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+.contacts-header h1 {
+  font-size: 2.5rem;
+  color: #ffd166;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contacts-header p {
+  color: #a9b4d3;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* MAIN CONTENT */
+.contacts-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CONTACTS GRID */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+/* CONTACT CARD */
+.contact-card {
+  background: rgba(10, 18, 42, 0.92);
+  border: 1px solid rgba(255, 209, 102, 0.16);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd166, #f0b500);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 209, 102, 0.32);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.32);
+}
+
+/* CARD HEADER */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.contact-info h3 {
+  color: #ffd166;
+  margin: 0 0 4px 0;
+  font-size: 1.3rem;
+}
+
+.contact-email {
+  color: #a9b4d3;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.contact-date {
+  color: #64748b;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* CARD BODY */
+.card-body {
+  margin-bottom: 20px;
+}
+
+.contact-message {
+  color: #eef2ff;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* CARD ACTIONS */
+.card-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.delete-btn,
+.reply-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+.reply-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.reply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* EMPTY STATE */
+.no-contacts {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-state {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.empty-state h3 {
+  color: #ffd166;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  color: #a9b4d3;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .admin-contacts {
+    padding: 15px;
+  }
+
+  .contacts-header {
+    padding: 30px 20px;
+  }
+
+  .contacts-header h1 {
+    font-size: 2rem;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-actions {
+    justify-content: center;
+  }
+}

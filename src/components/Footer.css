@@ -1,0 +1,76 @@
+/* ================= FOOTER ================= */
+.footer {
+  background-color: #05060d;
+  color: #d8dbe5;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 193, 7, 0.12);
+}
+
+/* MAIN CONTAINER */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 40px;
+  gap: 30px;
+}
+
+/* BOXES */
+.footer-box {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* LOGO */
+.footer-logo-container {
+  margin-bottom: 15px;
+}
+
+.footer-logo-container .logo-text {
+  font-size: 24px;
+}
+
+/* HEADINGS */
+.footer-box h3 {
+  color: #ffd166;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* LINKS */
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #d8dbe5;
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #ffd166;
+  padding-left: 5px;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 193, 7, 0.08);
+  font-size: 13px;
+  color: #94a3b8;
+}
